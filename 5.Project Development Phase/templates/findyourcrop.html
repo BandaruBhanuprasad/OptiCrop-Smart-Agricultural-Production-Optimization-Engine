@@ -42,14 +42,15 @@
         .form-section {
             flex: 1;
             display: flex;
-            justify-content: flex-end;
+            justify-content:center;
             align-items: center;
             padding: 40px;
         }
         .form-box {
-            background: rgba(255,255,255,0.1);
+            background:rgba(0, 0, 0, 0.75);
             padding: 20px;
-            width: 280px;
+            width: 320px;
+            border-radius: 6px;
         }
         .form-box p {
             color: white;
@@ -108,19 +109,19 @@
             <div class="form-box">
                 <p>Please enter the conditions</p>
                 <form action="{{ url_for('predict') }}" method="post">
-                    <label for="nitrogen">nitrogen:</label>
+                    <label for="nitrogen">Nitrogen:</label>
                     <input type="text" id="nitrogen" name="nitrogen" placeholder="nitrogen" required/>
-                    <label for="phosphorous">phosphorous:</label>
+                    <label for="phosphorous">Phosphorous:</label>
                     <input type="text" id="phosphorous" name="phosphorous" placeholder="phosphorous" required/>
-                    <label for="potassium">potassium:</label>
+                    <label for="potassium">Potassium:</label>
                     <input type="text" id="potassium" name="potassium" placeholder="potassium" required/>
-                    <label for="temperature">temperature:</label>
+                    <label for="temperature">Temperature:</label>
                     <input type="text" id="temperature" name="temperature" placeholder="temperature" required/>
-                    <label for="humidity">humidity:</label>
+                    <label for="humidity">Humidity:</label>
                     <input type="text" id="humidity" name="humidity" placeholder="humidity" required/>
-                    <label for="ph">ph:</label>
+                    <label for="ph">Ph:</label>
                     <input type="text" id="ph" name="ph" placeholder="ph" required/>
-                    <label for="rainfall">rainfall:</label>
+                    <label for="rainfall">Rainfall:</label>
                     <input type="text" id="rainfall" name="rainfall" placeholder="rainfall" required/>
                     <button type="submit" class="btn-predict">Predict</button>
                 </form>
